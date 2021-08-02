@@ -1,0 +1,41 @@
+.lnb {
+  position: sticky;
+  top: 0;
+  background-color: $white;
+  border-bottom: 1px solid $border;
+
+  .tool-list {
+    @include flexbox(end);
+    height: 50px;
+
+    .tool-item {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+
+      button {
+        @include text-style(14);
+        transition: color 200ms ease-in-out;
+
+        &.is-active,
+        &:not(:disabled):active {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    .tool-list {
+      .tool-item {
+        button {
+          @include text-style(16);
+
+          &:not(:disabled):hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}

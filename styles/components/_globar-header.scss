@@ -1,15 +1,19 @@
 .global-header {
   @include flexbox(start);
-
   height: 50px;
   background-color: $white;
   border-bottom: 1px solid $border;
+
+  .container {
+    @include flexbox(center);
+  }
 
   .title {
     @include text-style(16, $secondary);
     display: inline-block;
     width: 160px;
     overflow: hidden;
+    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
 

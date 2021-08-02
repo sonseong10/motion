@@ -5,11 +5,15 @@
 
 @import './base/nomalize';
 @import './base/reset';
+@import './base/global';
 
 @import './mixins/responsive';
 @import './mixins/text-style';
 @import './mixins/flexbox';
 
+@import './module/buttons';
+
 @import './components/globar-header';
+@import './components/lnb';
 
 @import './layout/grids';
