@@ -1,0 +1,26 @@
+.global-header {
+  @include flexbox(start);
+
+  height: 50px;
+  background-color: $white;
+  border-bottom: 1px solid $border;
+
+  .title {
+    @include text-style(16, $secondary);
+    display: inline-block;
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.is-active {
+      color: $primary;
+    }
+  }
+
+  @include responsive(T) {
+    .title {
+      @include text-style(18);
+    }
+  }
+}
