@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  padding: 0 $sm-margin;
+  margin: 0 auto;
+
+  @include responsive(T) {
+    max-width: $md-max-container;
+    padding: 0 $md-margin;
+  }
+
+  @include responsive(D) {
+    max-width: $lg-max-container;
+    padding: 0;
+  }
+}
