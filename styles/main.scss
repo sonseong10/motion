@@ -1,3 +1,5 @@
-p {
-  color: red;
-}
+@import './constants/color';
+@import './constants/typography';
+
+@import './base/nomalize';
+@import './base/reset';
