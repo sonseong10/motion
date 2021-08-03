@@ -1,10 +1,11 @@
 .emoji-wrapper {
+  $chose-button-size: 80px;
+
   position: relative;
 
   .chose-button,
   .emoji-button {
     padding: 8px;
-    font-size: 48px;
     border-radius: 4px;
     transition: background-color 300ms ease-in-out;
 
@@ -13,19 +14,26 @@
     }
   }
 
+  .chose-button {
+    width: $chose-button-size;
+    height: $chose-button-size;
+    font-size: 48px;
+  }
+
   .emoji-list {
     @include flexbox(start);
     position: absolute;
-    top: 0;
+    top: $chose-button-size;
     left: 0;
     padding: 4px;
-    pointer-events: none;
     background-color: $white;
     border: 1px solid $border;
     border-radius: 4px;
     opacity: 0;
+    visibility: hidden;
     box-shadow: $dropdown-shadow;
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out,
+      visibility 200ms ease-in-out;
 
     .emoji-item {
       .emoji-button {
@@ -40,9 +48,9 @@
 
   &.is-open {
     .emoji-list {
-      pointer-events: all;
       opacity: 1;
-      transform: translate3d(0, 80px, 0);
+      visibility: visible;
+      transform: translate3d(0, 10px, 0);
     }
   }
 
