@@ -1,10 +1,10 @@
-.emoji-wrapper {
+.emoji {
   $chose-button-size: 80px;
-
   position: relative;
+  margin: 12px 0;
 
   .chose-button,
-  .emoji-button {
+  &-button {
     padding: 8px;
     border-radius: 4px;
     transition: background-color 300ms ease-in-out;
@@ -20,7 +20,7 @@
     font-size: 48px;
   }
 
-  .emoji-list {
+  &-list {
     @include flexbox(start);
     position: absolute;
     top: $chose-button-size;
@@ -35,7 +35,7 @@
     transition: transform 200ms ease-in-out, opacity 200ms ease-in-out,
       visibility 200ms ease-in-out;
 
-    .emoji-item {
+    &-item {
       .emoji-button {
         @include text-style(18);
 
