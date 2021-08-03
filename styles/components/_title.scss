@@ -1,0 +1,28 @@
+.title {
+  &-input {
+    @include text-style(16, $secondary);
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    :focus {
+      background-color: $background;
+    }
+
+    &.is-active {
+      font-weight: 700;
+      @include text-style(18, $primary);
+    }
+  }
+
+  @include responsive(T) {
+    &-input {
+      @include text-style(18);
+
+      &.is-active {
+        @include text-style(24, $primary);
+      }
+    }
+  }
+}
