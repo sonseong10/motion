@@ -21,6 +21,10 @@ export class TextInput extends BaseContents<HTMLElement> {
 
   get desc(): string {
     const element = this.element.querySelector('#desc')! as HTMLInputElement
+    if (!element.value) {
+      alert('Text Empty! 🤔')
+      throw new Error('Text Empty')
+    }
     return element.value
   }
 }

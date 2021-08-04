@@ -21,7 +21,7 @@ export class URLInput extends BaseContents<HTMLElement> {
 
   get url(): string {
     const element = this.element.querySelector('#url')! as HTMLInputElement
-    if (element.value == null) {
+    if (!element.value) {
       alert('URL Empty! 🤔')
       throw new Error('URL Empty')
     }

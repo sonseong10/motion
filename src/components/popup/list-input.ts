@@ -22,6 +22,11 @@ export class ArrayInput extends BaseContents<HTMLElement> {
   get item(): Array<string> {
     const element = this.element.querySelector('#item')! as HTMLInputElement
     const result = element.value.split(',')
+
+    if (!element.innerText) {
+      alert('List Empty! 🤔')
+      throw new Error('List Empty')
+    }
     return result
   }
 }
