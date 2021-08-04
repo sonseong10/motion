@@ -1,0 +1,23 @@
+.image {
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-desc {
+    @include text-style(12, $secondary);
+    word-break: break-all;
+  }
+
+  @include responsive(T) {
+    img {
+      max-width: 100%;
+    }
+
+    &-desc {
+      @include text-style(14, $secondary);
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.todo {
+  width: 100vw;
+  max-width: 230px;
+
+  h3 {
+    @include text-style(18, $primary);
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-list {
+    &-item {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      height: 46px;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &-label {
+    @include text-style(14, $primary);
+    width: 100%;
+    word-break: break-all;
+    cursor: pointer;
+
+    &.is-active {
+      color: $secondary;
+      text-decoration: line-through;
+    }
+  }
+
+  &-text {
+    margin-right: 6px;
+    pointer-events: none;
+  }
+
+  @include responsive(T) {
+    h3 {
+      @include text-style(18);
+      margin-bottom: 12px;
+    }
+
+    &-label {
+      @include text-style(16);
+    }
+  }
+}

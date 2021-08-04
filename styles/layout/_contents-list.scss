@@ -1,0 +1,15 @@
+.contents-list {
+  @include flexbox(start, start);
+  flex-wrap: wrap;
+
+  &-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @include responsive(T) {
+    &-item {
+      width: auto;
+    }
+  }
+}

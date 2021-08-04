@@ -1,0 +1,52 @@
+.card {
+  @include flexbox(start, start);
+  padding: 20px 0 20px 8px;
+  cursor: grab;
+  border-radius: 8px;
+  transition: background-color 200ms ease-in-out;
+
+  &:active {
+    background-color: $background;
+  }
+
+  &-left {
+    width: 100%;
+  }
+
+  &-right {
+    .remove-button {
+      @include flexbox;
+      @include text-style(16, $secondary);
+      width: 46px;
+      height: 46px;
+      padding: 8px;
+      transition: color 200ms ease-in-out;
+
+      &:active {
+        color: $red;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    @include inline-flexbox(start, start);
+
+    &:hover {
+      background-color: $background;
+    }
+
+    &-left {
+      width: auto;
+    }
+
+    &-right {
+      .remove-button {
+        @include text-style(24);
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}

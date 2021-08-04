@@ -1,0 +1,19 @@
+.note {
+  // width: 80vw;
+
+  &-title {
+    @include text-style(18, $primary);
+    margin-bottom: 4px;
+  }
+
+  &-desc {
+    @include text-style(14, $primary);
+    white-space: pre-wrap;
+  }
+
+  @include responsive(T) {
+    &-desc {
+      @include text-style(16);
+    }
+  }
+}
