@@ -1,13 +1,17 @@
 .title {
+  margin-bottom: 20px;
+
   &-input {
     @include text-style(16, $secondary);
     width: 100%;
+    padding: 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 
-    :focus {
+    &:active {
       background-color: $background;
+      border-radius: 4px;
     }
 
     &.is-active {
@@ -22,6 +26,11 @@
 
       &.is-active {
         @include text-style(24, $primary);
+      }
+
+      &:hover {
+        background-color: $background;
+        border-radius: 4px;
       }
     }
   }
