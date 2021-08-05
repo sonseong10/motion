@@ -1,6 +1,7 @@
 import { BaseContents } from '../base-contents.js'
+import { ArrayData } from './popup.js'
 
-export class ArrayInput extends BaseContents<HTMLElement> {
+export class ArrayInput extends BaseContents<HTMLElement> implements ArrayData {
   constructor() {
     super(`<div class="input-group">
             <div class="input-box">

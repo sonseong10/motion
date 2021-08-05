@@ -4,6 +4,20 @@ import { Contentsable } from '../contents.js'
 type OnCloseHander = () => void
 type OnSubmitHander = () => void
 
+export interface URLData {
+  readonly title: string
+  readonly url: string
+}
+
+export interface TextData {
+  readonly title: string
+  readonly desc: string
+}
+
+export interface ArrayData {
+  readonly title: string
+  readonly item: Array<string>
+}
 export class Popup extends BaseContents<HTMLElement> implements Contentsable {
   closeHandler?: OnCloseHander
   submitHandler?: OnSubmitHander

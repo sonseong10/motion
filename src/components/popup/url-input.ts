@@ -1,6 +1,7 @@
 import { BaseContents } from '../base-contents.js'
+import { URLData } from './popup.js'
 
-export class URLInput extends BaseContents<HTMLElement> {
+export class URLInput extends BaseContents<HTMLElement> implements URLData {
   constructor() {
     super(`<div class="input-group">
             <div class="input-box">
