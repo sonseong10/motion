@@ -578,6 +578,19 @@ address {
     display: flex;
     align-items: center;
     justify-content: center; }
+    .global-header .container .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100%; }
+  .global-header .logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); }
+    .global-header .logo img {
+      display: block; }
   .global-header .page-title {
     font-size: 16px;
     line-height: 24px;

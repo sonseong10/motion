@@ -6,6 +6,23 @@
 
   .container {
     @include flexbox(center);
+
+    .row {
+      @include flexbox;
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    img {
+      display: block;
+    }
   }
 
   .page-title {
