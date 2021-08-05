@@ -19,6 +19,7 @@ import {
 import { TextInput } from './components/popup/text-input.js'
 import { URLInput } from './components/popup/url-input.js'
 import './utils/emoji-picker.js'
+// import './utils/drag-derop.js'
 
 type InputComponentConstrutor<
   T extends (URLData | TextData | ArrayData) & Contents

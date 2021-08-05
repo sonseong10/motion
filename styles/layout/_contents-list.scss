@@ -1,15 +1,32 @@
 .contents-list {
   @include flexbox(start, start);
   flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 8px;
 
   &-item {
     width: 100%;
     margin-bottom: 20px;
+
+    &.is-dreg {
+      opacity: 0.2;
+      animation: drag_animation 200ms;
+    }
   }
 
   @include responsive(T) {
     &-item {
       width: auto;
     }
+  }
+}
+
+@keyframes drag_animation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
   }
 }

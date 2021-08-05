@@ -3,7 +3,7 @@ import { BaseContents } from '../base-contents.js'
 export class ImageComponent extends BaseContents<HTMLElement> {
   constructor(title: string, url: string) {
     super(`<figure class="image">
-            <img />
+            <img draggable="false"/>
             <figcaption class="image-desc"></figcaption>
           </figure> `)
 

@@ -1,5 +1,6 @@
 export interface Contents {
   appendTo(parent: HTMLElement, position?: InsertPosition): void
+  append(component: Contents, position?: InsertPosition): void
   removeFrom(parent: HTMLElement): void
 }
 
@@ -13,6 +14,10 @@ export class BaseContents<T extends HTMLElement> implements Contents {
 
   appendTo(parent: HTMLElement, position: InsertPosition = 'afterbegin') {
     parent.insertAdjacentElement(position, this.element)
+  }
+
+  append(component: Contents, position?: InsertPosition) {
+    component.appendTo(this.element, position)
   }
 
   removeFrom(parent: HTMLElement) {

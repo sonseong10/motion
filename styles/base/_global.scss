@@ -9,3 +9,8 @@
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+// Drag and Drop
+.mute-children * {
+  pointer-events: none;
+}
