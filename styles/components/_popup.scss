@@ -4,6 +4,7 @@
   padding: 20px;
   background-color: $white;
   border-radius: 4px;
+  box-shadow: $popup-shadow;
 
   &-header,
   &-body {
@@ -38,7 +39,6 @@
 
         textarea {
           height: 50px;
-          resize: none;
         }
       }
     }
