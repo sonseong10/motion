@@ -21,12 +21,14 @@
 @import './module/note';
 @import './module/img';
 
-@import './components/globar-header';
+@import './components/global-header';
+@import './components/global-footer';
 @import './components/lnb';
 @import './components/emoji';
 @import './components/card';
 @import './components/popup';
 
 @import './layout/grids';
+@import './layout/contents';
 @import './layout/contents-list';
 @import './layout/overlay';
