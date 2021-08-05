@@ -24,7 +24,7 @@ export class Popup extends BaseContents<HTMLElement> implements Contentsable {
   constructor() {
     super(
       `<div>
-        <div class="overlay is-active">
+        <div class="overlay">
           <artice class="popup">
             <header class="popup-header">
               <h3 class="popup-title">Add Element</h3>
