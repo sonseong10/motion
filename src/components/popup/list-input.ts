@@ -23,7 +23,7 @@ export class ArrayInput extends BaseContents<HTMLElement> {
     const element = this.element.querySelector('#item')! as HTMLInputElement
     const result = element.value.split(',')
 
-    if (!element.innerText) {
+    if (!element.value) {
       alert('List Empty! 🤔')
       throw new Error('List Empty')
     }
